@@ -1,0 +1,103 @@
+<!-- 第一區 start -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td><a href="./index.php"><img src="./images/artindex.gif" alt="go homepage"></a></td> <!-- 裝飾圖片 -->
+    <td width="100%" bgcolor="#DD6611" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" valign="top" class="spotlight">
+        <tr valign="bottom">
+          <td align="center" width="20%"><{$artarray.headertitle}></td> <!-- 頁首標題 -->
+          <td width="100%"><img src="./images/line_dot.gif" width="100%" height="1"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="summary"><{$artarray.header}></td> <!-- 頁首描述 -->
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- 第一區 end -->
+<br />
+<!-- 第二區 start -->
+<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <!-- 左邊主分類選單 start -->
+    <td width="200">
+      <table bgcolor="#dddddd" border="0" cellpadding="5" cellspacing="1" width="100%" align="center">
+        <{foreach item=category from=$categories}>
+        <tr align="center" bgcolor="#ffffff" valign="top">
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0">
+              <{if $category.imgalign == TRUE }><{if $category.sectionimage }>
+              <tr>
+                <td><{$category.sectionimage}></td>
+              </tr>
+              <{/if}><{/if}>
+              <tr>
+                <td height="7"></td>
+              </tr>
+              <tr>
+                <td height="14" bgcolor="#DDDDDD" style="padding-left:3px; vertical-align:middle;"><{$category.title}></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </td>
+    <td width="5">&nbsp;</td>
+    <!-- 左邊主分類選單 end -->
+    <td width="100%">
+      <table bgcolor="#AAAAAA" border="0" cellpadding="5" cellspacing="1" width="100%" align="center">
+        <tr>
+        <{foreach item=subcategory from=$subcategories}>
+          <td valign="top" bgcolor="#ffffff" width="<{$subcategory.columnwidth}>%" height="130">
+            <table width="98%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr>
+                <td height="14" bgcolor="#C8EAEC" style="padding-left:3px; vertical-align:middle;" colspan="4" align="center" valign="top" class="info_desc_03"><{$subcategory.title}></td>
+              </tr>
+              <{foreach item=artlinks from=$subcategory.content}>
+              <tr>
+                <td class="channel-artical"><{$artlinks.articlelink}></td>
+              <{if $artlinks.num == 3}>
+              </tr><tr>
+              <{/if}>
+              <{/foreach}>
+            </table>
+          </td>
+        <{if $subcategory.i  == 0 }></tr><{/if}>
+        <{/foreach}>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- 第二區 end -->
+<br />
+<!-- 第三區 start -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td width="30%" bgcolor="#EEEEEE" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="sortmenu">
+        <tr valign="bottom">
+          <td align="center" width="30%"><{$lang_menu}></td>
+          <td width="100%"><img src="./images/line_dot_red.gif" width="100%" height="1"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="summary"><{$artarray.menu}></td>
+        </tr>
+      </table>   
+ </td>
+    <td width="70%" bgcolor="#77AA22" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" valign="top" class="spotlight">
+        <tr valign="bottom">
+          <td align="center" width="15%"><{$artarray.footertitle}></td>
+          <td width="100%"><img src="./images/line_dot.gif" width="100%" height="1"></td>
+        </tr>
+        <tr>
+          <td class="summary"><{$lang_rb}></td>
+          <td class="summary"><{$artarray.footer}></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- 第三區 end -->

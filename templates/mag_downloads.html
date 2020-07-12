@@ -1,0 +1,47 @@
+<!-- 附件為圖檔時的呈現方式 (gif/jpg/jpeg) -->
+<{if $down.mimetype == "image/gif" or $down.mimetype == "image/jpg" or $down.mimetype == "image/jpeg"}>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="photo_tbl">
+  <tr>
+    <td class="photo_img"><{$down.downlink}></td>
+  </tr>
+  <tr>
+    <td height="2"></td>
+  </tr>
+  <tr>
+    <td class="photo_desc"><{$down.description}></td>
+  </tr> 
+</table>
+<!-- 附件為影音檔時的呈現方式 (asf/mp3) -->
+<{elseif $down.mimetype == "video/x-ms-asf" or $down.mimetype == "video/mp3"}>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="music_tbl">
+  <tr>
+    <td class="music_desc"><{$down.description}></td>
+  </tr>
+  <tr>
+    <td height="2"></td>
+  </tr>
+  <tr>
+    <td><{$down.downlink}></td>
+  </tr>
+</table>
+<{else}>
+<!-- 一般附件呈現方式 -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="file_tbl">
+  <tr>
+    <td class="file_title" colspan="2"><{$down.downlink}></td>
+  </tr>
+  <tr>
+    <td class="file_text"><{$down.broken}></td>
+    <td class="file_text"><{$lang_filesize}>:&nbsp;<{$down.size}></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="file_desc">
+        <tr>
+          <td><{$down.description}></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<{/if}>

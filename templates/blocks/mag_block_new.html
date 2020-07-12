@@ -1,0 +1,16 @@
+<table width="96%" cellspacing="1" align="center">
+
+<{foreach item=mag from=$block.new}> 
+
+<tr class="text_line">
+ 
+<td width="6%"><img src="<{$xoops_url}>/modules/magazine/images/block.gif"></td>
+
+<td width="70%"><{$mag.title}><{$mag.newicon}></td> 
+
+<td align="right" width="20%"><font color="#5A8700"><{$mag.new}></font></td>
+
+</tr> 
+<{/foreach}> 
+
+</table>

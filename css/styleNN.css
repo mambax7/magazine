@@ -1,0 +1,268 @@
+.indexheader {
+        color: #3399AA;
+        padding: 5px;
+}
+.indexheader a {
+        color: #3399AA;
+}
+.indexheader a:hover {
+        color: #FF99CC;
+}
+.description {
+        color: #CC6699;
+}
+.spotlight {
+        color: #FFFFFF;
+        padding: 5px;
+}
+.spotlight a {
+        color: #FFFFFF;
+}
+.spotlight a:hover {
+        color: #FFFFFF;
+}
+
+.sarticle {
+        color: #FFFFFF;
+        padding: 5px;
+}
+.sarticle a {
+	color: #FFFFFF;
+}
+.sarticle a:hover {
+	color: #FFCC66;
+}
+
+.sortmenu {
+        color: #333333;
+        padding: 5px;
+}
+.sortmenu a {
+	color: #333333;
+}
+.sortmenu a:hover {
+	color: #FF3300;
+}
+
+.summary {
+        padding: 5px;
+}
+.channel-artical,.channel-artical a {
+ 	color: #44AABB;
+        text-align: left; vertical-align : middle;
+        line-height:180%;
+}
+.channel-artical a:hover {
+	color: #88BB22;
+        text-align: left; vertical-align : middle;
+}
+.titlemain {
+	color: #029bba;
+	font-weight: bold;
+	font-size: 16px;
+}
+.subtitle {
+	color: #779900;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.info_text_01 {
+	color: #333333;
+}
+.info_text_01 A {
+	color: #333333;
+	text-decoration: none;
+}
+.info_text_01 A:hover {
+	color: #336699;
+}
+
+.info_text_02 {
+	color: #FFFFFF;
+}
+.info_text_02 A {
+	color: #FFFFFF;
+}
+.info_text_02 A:hover {
+	color: #ffcc00;
+}
+
+
+tr.text_line td {
+	border-bottom: 1px dashed #AABBAA;
+        padding: 2px;
+        line-height:180%;
+}
+
+.page_bar {
+        background-color: #F4F4F4;
+        vertical-align: middle;
+        text-align: right;
+        height: 20px;
+}
+.title_bar {
+        background-color: #DEEBFA;
+        color: #0066CC;
+        vertical-align: middle;
+        height: 20px;
+}
+td#date {
+        color: #88AA55;
+}
+td#rate {
+        color: #999999;
+}
+td#rate2 {
+        color: #FF9900;
+}
+td#view {
+        color: #999999;
+}
+td#view2 {
+        color: #F9602A;
+}
+.tbl520 {
+        width: 520px;
+}
+.tbl300 {
+        width: 300px;
+}
+.tbl210 {
+        width: 210px;
+}
+.photo_tbl {
+        border: solid 1px #cccccc;
+        padding: 5px;
+}
+.photo_img {
+        border: solid 1px #dddddd;
+        text-align: center;
+        vertical-align: middle;
+}
+.photo_desc {
+        color: #999999;
+        padding: 2px;
+        text-align: right; 
+}
+
+.music_tbl {
+        padding: 5px;
+        border: 1px solid #DDDDDD;
+}
+.music_desc {
+        color: #BB66AA;
+        padding: 2px;
+        background-color: #F3EFFD;
+        text-align: center;
+}
+
+.file_tbl {
+        padding: 2px;
+        background-color: #F8E5D5;
+}
+.file_title {
+        background-color: #FFCCAA;
+        color: #FF5511;
+        padding: 2px;
+}
+.file_title a{
+        background-color: #FFCCAA;
+        color: #FF5511;
+        padding: 2px;
+}
+.file_text {
+        color: #FF9966;
+        padding: 2px;
+}
+.file_text a{
+        color: #FF9966;
+        padding: 2px;
+}
+.file_desc {
+        color: #999999;
+        padding: 2px;
+        background-color: #FFFFFF;
+        border: 1px solid #F4F4F4;
+}
+
+.review_tbl {
+        background-color: #E5F5F4;
+}
+.review_title {
+        color: #3399AA;
+        font-weight: bold;
+        padding: 2px;
+}
+.review_desc {
+        color: #117777;
+        padding: 2px;
+}
+
+.page_tbl {
+        padding: 0px;
+        background-color: #CCCCCC;
+        border: 1px solid #DDDDDD;
+}
+.page_title {
+        background-color: #66BBDD;
+        color: #FFFFFF;
+        padding: 2px;
+}
+.page_desc {
+        color: #333333;
+        padding: 2px;
+        background-color: #FFFFFF;
+}
+.page_desc A {
+	color: #333333;
+	text-decoration: none;
+}
+.page_desc A:hover {
+	color: #336699;
+}
+
+.link_tbl {
+        padding: 0px;
+        background-color: #CCCCCC;
+        border: 1px solid #DDDDDD;
+}
+.link_title {
+        background-color: #66BBDD;
+        color: #FFFFFF;
+        padding: 2px;
+}
+.link_desc {
+        color: #333333;
+        padding: 2px;
+        background-color: #E5F5F5;
+}
+.link_desc A {
+	color: #333333;
+	text-decoration: none;
+}
+.link_desc A:hover {
+	color: #336699;
+}
+
+.intro_tbl {
+        padding: 0px;
+        border: 1px solid #DDDDDD;
+}
+.intro_title {
+        background-color: #AFD65A;
+        color: #FFFFFF;
+        padding: 2px;
+}
+.intro_desc {
+        color: #333333;
+        padding: 2px;
+        background-color: #EAF6EC;
+}
+.intro_desc A {
+	color: #333333;
+	text-decoration: none;
+}
+.intro_desc A:hover {
+	color: #336699;
+}

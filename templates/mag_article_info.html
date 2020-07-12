@@ -1,0 +1,127 @@
+<table border="0" cellpadding="0" cellspacing="0" class="tbl210">
+  <{if $reviews.display == 1}>
+  <tr>
+    <td><{include file="db:mag_reviews.html"}></td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+  </tr>  
+  <{/if}>
+  <{if $article.morelinks !=''}>
+  <tr>
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="page_tbl">
+        <tr>
+          <td height="25" class="page_title"><{$lang_pagetitle}></td>
+        </tr>
+        <tr>
+          <td>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="page_desc">
+              <tr>
+                <td><{$article.firstlinks}></td>
+              </tr>
+              <{foreach item=morelinks from=$article.morelinks}>
+              <tr>
+                <td><{$morelinks.articlelink}></td>
+              </tr>
+              <{/foreach}>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+  </tr>
+  <{/if}>
+  <{if $downloads > 1}>
+  <tr>
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <{section name=i loop=$downloads}>
+        <tr>
+          <td><{include file="db:mag_downloads.html" down=$downloads[i]}></td>
+        </tr>
+        <tr>
+          <td height="5"></td>
+        </tr>
+      <{/section}>
+      </table>
+    </td>
+  </tr>
+  <{/if}>
+  <{if $relatednum}>
+  <tr>
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="intro_tbl">
+        <tr>
+          <td height="25" class="intro_title"><{$lang_relatedart}></td>
+        </tr>
+        <{foreach item=related from=$related_article}>
+        <tr>
+          <td class="intro_desc">¡E<{$related.title}></td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+  </tr>
+  <{/if}>
+  <{if $relatednewsnum}>
+  <tr>
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="link_tbl">
+        <tr>
+          <td height="25" class="link_title"><{$lang_relatednews}></td>
+        </tr>
+        <{foreach item=relatednews from=$related_newsstory}>
+        <tr>
+          <td class="link_desc">¡E<{$relatednews.title}> </td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </td>
+  </tr>
+  <{/if}>
+  <{if $relatedlink}>
+  <tr>
+    <td height="5"></td>
+  </tr>
+  <tr>
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="link_tbl">
+        <tr>
+          <td height="25" class="link_title"><{$lang_relatedlinks}></td>
+        </tr>
+        <{foreach item=relatedlinks from=$related_link}>
+        <tr>
+          <td class="link_desc">¡E<{$relatedlinks.linktitle}></td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="5"></td>
+  </tr>
+  <{/if}>
+  <{if $intro}>
+  <tr>
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="intro_tbl">
+        <tr>
+          <td align="center" class="intro_title"><{$lang_lyric}></td>
+        </tr>
+        <{foreach item=intros from=$intro_link}>
+        <tr>
+          <td class="intro_desc">¡E<{$intros.linktitle}></td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </td>
+  </tr>
+  <{/if}>
+</table>

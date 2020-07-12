@@ -1,0 +1,138 @@
+<table width="570" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+     <td height="5">&nbsp;</td>
+  </tr>
+  <tr>
+     <td><img src="images/broken/logintop.gif" width="570" height="10"></td>
+   </tr>
+   <tr>
+     <td align="center" background="images/broken/logintop.gif">
+       <table width="550" border="0" cellpadding="8" cellspacing="0" bgcolor="E1DFDF" style="border: 1px solid #E1DFDF;">
+         <tr>
+           <td bgcolor="#FFFFFF">
+             <table width="530" border="0" cellspacing="0" cellpadding="0" style="border-bottom: 1px solid #E1DFDF">
+               <tr>
+                 <td width="80" align="center"><img src="images/broken/report.gif" width="80" height="20"></td>
+                 <td>&nbsp;</td>
+                 <td width="127"><a href="/"><img src="images/broken/login_ci.gif" width="127" height="29" border="0"></a></td>
+               </tr>
+             </table>
+           </td>
+         </tr>
+         <tr>
+           <td bgcolor="#FFFFFF">
+             <table width="530" border="0" cellspacing="0" cellpadding="0">
+               <tr>
+                 <td valign="top">
+                   <{if $brokenreport == true}>
+                   <table height="200" border="0" cellpadding="8" cellspacing="0" bgcolor="dedede" style="border: 1px solid #E1DFDF;">
+                     <tr>
+                       <td valign="top" bgcolor="#FFFFFF">
+                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                           <tr>
+                             <td align="left"><{$lang_alreadyreported}></td>
+                           </tr>
+                        </table>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                          <tr>
+                            <td height="15"><img src="images/broken/dotline.gif" width="98%" height="1"></td>
+                          </tr>
+                          <tr>
+                            <td height="15"><img src="images/broken/dotline.gif" width="98%" height="1"></td>
+                          </tr>
+                        </table>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="3" width="100%">
+                          <tr>
+                            <td><b><{$lang_arttitle}>:</b> <{$down.arttitle}></td>
+                          </tr>
+                          <tr>
+                            <td><b><{$lang_filetitle}>:</b> <{$down.title}></td>
+                          </tr>
+                          <tr>
+                            <td><b><{$lang_reporter}>:</b> <{$down.reporter}></td>
+                          </tr>
+                          <tr>
+                            <td><b><{$lang_sourceid}>:</b> <{$down.id}></td>
+                          </tr>
+                          <tr>
+                            <td><b><{$lang_datereported}>:</b> <{$down.date}></td>
+                          </tr>
+                          <tr>
+                            <td align="center">
+                              <form action="brokenfile.php" method="POST">
+                              <input type=button value="<{$lang_cancel}>" onclick="javascript:history.go(-1)" />
+                              </form>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <{else}>
+                   <table height="200" border="0" cellpadding="8" cellspacing="0" bgcolor="dedede" style="border: 1px solid #E1DFDF;">
+                     <tr>
+                       <td valign="top" bgcolor="#FFFFFF">
+                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                           <tr>
+                             <td align="left"><{$lang_beforesubmit}></td>
+                           </tr>
+                        </table>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                          <tr>
+                            <td height="15"><img src="images/broken/dotline.gif" width="98%" height="1"></td>
+                          </tr>
+                          <tr>
+                            <td height="15"><img src="images/broken/dotline.gif" width="98%" height="1"></td>
+                          </tr>
+                        </table>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="3" width="100%">
+                          <tr>
+                            <td><b><{$lang_arttitle}>:</b> <{$down.arttitle}></td>
+                          </tr>
+                          <tr>
+                            <td><b><{$lang_filetitle}>:</b> <{$down.title}></td>
+                          </tr>
+                          <tr>
+                            <td><b><{$lang_publisher}>:</b> <{$down.publisher}></td>
+                          </tr>
+                          <tr>
+                            <td><b><{$lang_size}>:</b> <{$down.size}></td>
+                          </tr>
+                          <tr>
+                            <td><b><{$lang_subdate}>:</b> <{$down.updated}></td>
+                          </tr>
+                          <tr>
+                            <td align="center">
+                              <form action="brokenfile.php" method="POST">
+                              <input type="hidden" name="lid" value="<{$file_id}>" /><input type="submit" name="submit" value="<{$lang_submitbroken}>" />&nbsp;<input type=button value="<{$lang_cancel}>" onclick="javascript:history.go(-1)" />
+                              </form>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <{/if}>
+                </td>
+                <td width="10">&nbsp;</td>
+                <td width="200">
+                  <table width="180" height="200" border="0" cellpadding="8" cellspacing="0" bgcolor="dedede" style="border: 1px solid #E1DFDF;">
+                    <tr>
+                      <td align="center" valign="middle" bgcolor="#FFFFFF"><img src="images/broken/hot.gif" width="180"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+     </td>
+  </tr>
+  <tr>
+    <td height="58" background="images/broken/loginunder.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="5">&nbsp;</td>
+  </tr>
+</table>

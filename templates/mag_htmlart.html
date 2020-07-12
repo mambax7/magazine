@@ -1,0 +1,61 @@
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <!-- main text -->
+    <td width="100%" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <!-- main text -->
+        <tr>
+          <!-- page choice -->
+          <td>
+          <{if $article.morelinks !=''}>
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" class="tbl210">
+            <tr>
+              <td height="25" class="page_title"><{$lang_pagetitle}></td>
+            </tr>
+            <tr>
+              <td>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="page_desc">
+                  <tr>
+                    <td><{$article.firstlinks}></td>
+                  </tr>
+                  <{foreach item=morelinks from=$article.morelinks}>
+                  <tr>
+                    <td><{$morelinks.articlelink}></td>
+                  </tr>
+                  <{/foreach}>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <{/if}>
+          <!-- article title -->
+            <span class="subtitle"><{$article.titlemain}></span> <{$article.adminlink}>
+            <span>
+               <{if $article.is_include == 1}>
+               <{include_php file="file:$my_template"}>
+               <{else}>
+               <{$article.maintext}>
+               <{/if}>
+            </span>
+            <br />
+            <span>
+            <a href='print.php?articleid=<{$article.articleid}>'><img src='images/print.gif' alt='<{$lang_printer}>' /></a><a target='_top' href='mailto:?subject=<{$lang_subjectsitename}>&body=<{$lang_subjectfound}>: <{$xoops_url}>/modules/magazine/article.php?articleid=<{$article.articleid}>'><img src='images/friend.gif' alt='<{$lang_tellafriend}>' /></a>&nbsp;<a href='makepdf.php?articleid=<{$article.articleid}>'><img src='images/makepdf.gif' alt='<{$lang_makepdf}>' /></a>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <{if $novote == true}>
+      <br />
+      <{include file="db:mag_poll.html"}>
+      <{/if}>
+    </td>
+  </tr>
+</table>
+<br />
+<table bgcolor="#dd6611" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td class="info_text_02"><{$article.menu}></td>
+    <td class="info_text_02"><{$lang_copyright}></td>
+    <td class="info_text_02"><{$lang_rb}></td>
+  </tr>
+</table>

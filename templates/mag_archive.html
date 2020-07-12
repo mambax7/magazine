@@ -1,0 +1,62 @@
+<table widtd="100%" border="0" cellspacing="0" cellpadding="0">
+  <{if $catarray.imageheader !=''}>
+  <tr>
+    <td cellspacing="0" cellpadding="0" align="left"><{$catarray.imageheader}></td>
+  </tr>
+  <{/if}>
+  <tr>
+    <td cellspacing="0" cellpadding="0" align="<{$catarray.indexheaderalign}>"><{$catarray.indexheader}></td>
+  </tr>
+</table>
+<br />
+
+<table cellpadding="2" cellspacing="1" width="100%">
+  <tr>
+    <td width="20%" valign="top">
+      <table cellpadding="2" cellspacing="1" width="100%" bgcolor="#F4F4F4">
+        <tr>
+          <td class="archive_title"><{$lang_newsarchives}></td>
+        </tr>
+      <{foreach item=year from=$years}>
+      <{foreach item=month from=$year.months}>
+        <tr class="<{cycle values='even, odd'}>">
+          <td><a href="./archive.php?year=<{$year.number}>&amp;month=<{$month.number}>"><{$month.string}> <{$year.number}></a></td>
+        </tr>
+      <{/foreach}>
+      <{/foreach}>
+      </table>
+    </td>
+    <td width="80%" valign="top">
+      <table cellpadding="2" cellspacing="1" width="100%">
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr class="title_bar">
+                <td width="55%"><{$lang_title}></td>
+                <td width="30%"><{$lang_actions}></td>
+                <td width="15%" align="center"><{$lang_date}></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <{foreach item=story from=$stories}>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr class="text_line">
+                <td width="55%"><{$story.title}></td>
+                <td width="30%" valign="middle"><a href="<{$story.print_link}>"><img src="images/print.gif" alt="<{$lang_printer}>" /></a><a href="<{$story.mail_link}>" target="_top" /><img src="images/friend.gif" alt="<{$lang_sendstory}>" />&nbsp;<a href='<{$story.pdf_link}>'><img src='images/makepdf.gif' alt='<{$lang_makepdf}>' /></a></td>
+                <td width="15%" align="center"><{$story.date}></td>
+              </tr>
+            </table>
+          </td>      
+        </tr>
+        <{/foreach}>
+      </table>
+      <br />
+      <div align="right"><{$lang_storytotal}></div>
+    </td>
+  </tr>
+</table>   
+<br />
+<div align="<{$catarray.indexfooteralign}>"><{$catarray.indexfooter}></div>

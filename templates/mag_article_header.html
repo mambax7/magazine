@@ -1,0 +1,72 @@
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <!-- 作者資訊 -->
+    <td valign="top" class="tbl300" bgcolor="#eeeeee">
+      <table border="0" cellpadding="0" cellspacing="0"  width="100%">
+        <tr>
+          <td valign="top">
+            <table width="100%" border="0" cellpadding="0" cellspacing="5">
+              <tr>
+                <td width="20%" class="info_text_01"><{$lang_aboutauthor}></td>
+                <td><img src="./images/line_dot_red.gif" width="100%" height="1"></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>  <!-- 作者大頭照 -->
+                      <td width="90"><{$article.userimg}></td>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="3" width="100%">
+                          <tr>  <!-- 作者名稱 & mail -->
+                            <td class="info_text_01"><{$lang_author}>: <{$article.username}> <{$article.email}></td>
+                          </tr>
+                          <tr>  <!-- 作者來自 -->
+                            <td class="info_text_01"><{$lang_from}>: <{$article.user_from}></td>
+                          </tr>
+                          <tr>  <!-- 作者興趣 -->
+                            <td class="info_text_01"><{$lang_interest}>: <{$article.user_intrest}></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td width="5"></td>
+    <!-- 文章資訊 -->
+    <td class="tbl210" bgcolor="#dd6611" valign="top">
+      <table border="0" cellpadding="0" cellspacing="5" width="100%">
+        <tr>
+          <td width="25%" class="info_text_02"><{$lang_artinfo}></td>
+          <td><img src="./images/line_dot.gif" width="100%" height="1"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <table border="0" cellpadding="0" cellspacing="3" width="200">
+              <tr>
+                <td><img src="./images/date.gif"></td> <!-- 文章發表日期 -->
+                <td class="info_text_02"><{$lang_published}>: <{$article.datetime}></td>
+              </tr>
+              <tr>
+                <td><img src="./images/view.gif"></td> <!-- 閱覽人氣 -->
+                <td class="info_text_02"><{$lang_views}>: <{$article.counter}> <{$lang_times}></td>
+              </tr>
+              <tr>
+                <td><img src="./images/rate.gif"></td> <!-- 推薦評分 -->
+                <td class="info_text_02"><{$lang_rating}>: <{$article.rating}>  (<{$article.votes}>)</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td width="5"></td>
+    <!-- 廣告 -->
+    <td class="tbl210" align="center" valign="middle"><img src="<{$article.image}>"></td>
+  </tr>
+</table>

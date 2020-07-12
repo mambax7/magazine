@@ -1,0 +1,118 @@
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td>
+          <!-- article title -->
+            <span class="titlemain"><{$article.titlemain}></span> <{$article.adminlink}>
+            <br /><br />
+            <{if $article.subtitle !=''}>
+            <span class="subtitle"><{$article.subtitle}></span>
+            <br /><br />
+            <{/if}>
+            <span>
+               <{if $article.is_include == 1}>
+               <{include_php file="file:$my_template"}>
+               <{else}>
+               <{$article.maintext}>
+               <{/if}>
+               <br /><{$pagenav}>
+            </span>
+            <div align="right" style="padding-right: 10px;">
+            <a href='print.php?articleid=<{$article.articleid}>'><img src='images/print.gif' alt='<{$lang_printer}>' /></a><a target='_top' href='mailto:?subject=<{$lang_subjectsitename}>&body=<{$lang_subjectfound}>: <{$xoops_url}>/modules/magazine/article.php?articleid=<{$article.articleid}>'><img src='images/friend.gif' alt='<{$lang_tellafriend}>' /></a>&nbsp;<a href='makepdf.php?articleid=<{$article.articleid}>'><img src='images/makepdf.gif' alt='<{$lang_makepdf}>' /></a>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <{if $novote == true}>
+      <br />
+      <{include file="db:mag_poll.html"}>
+      <{/if}>
+      <{include file="db:mag_comment.html"}>
+    </td>
+    <td width="5"></td>
+    <!-- info block-->
+    <td class="tbl210" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td width="100%" bgcolor="#cccccc" valign="top">
+            <table border="0" cellpadding="0" cellspacing="5" width="100%">
+              <tr>
+                <td width="35%" class="info_text_01"><{$lang_aboutauthor}></td>
+                <td><img src="./images/line_dot_red.gif" width="100%" height="1"></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td><{$article.userimg}></td>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="3" width="100%">
+                          <tr>
+                            <td class="info_text_01"><{$lang_author}>: <{$article.username}> <{$article.email}></td>
+                          </tr>
+                          <tr>
+                            <td class="info_text_01"><{$lang_from}>: <{$article.user_from}></td>
+                          </tr>
+                          <tr>
+                            <td class="info_text_01"><{$lang_interest}>: <{$article.user_intrest}></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              <tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="5"></td>
+        </tr>
+        <tr>
+          <td width="100%" bgcolor="#dd6611" valign="top">
+            <table border="0" cellpadding="0" cellspacing="5" width="100%">
+              <tr>
+                <td width="35%" class="info_text_02"><{$lang_artinfo}></td>
+                <td><img src="./images/line_dot.gif" width="100%" height="1"></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <table border="0" cellpadding="0" cellspacing="3" width="100%">
+                    <tr>
+                      <td><img src="./images/date.gif"></td>
+                      <td class="info_text_02"><{$lang_published}>: <{$article.datetime}></td>
+                    </tr>
+                    <tr>
+                      <td><img src="./images/view.gif"></td>
+                      <td class="info_text_02"><{$lang_views}>: <{$article.counter}> <{$lang_times}></td>
+                    </tr>
+                    <tr>
+                      <td><img src="./images/rate.gif"></td>
+                      <td class="info_text_02"><{$lang_rating}>: <{$article.rating}>  (<{$article.votes}>)</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="5"></td>
+        </tr>
+        <tr>
+          <td valign="top"><{include file="db:mag_article_info.html"}></td>
+        </tr>  
+      </table>
+    </td>
+  </tr>
+</table>
+<br />
+<table bgcolor="#dd6611" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td class="info_text_02"><{$article.menu}></td>
+    <td class="info_text_02"><{$lang_copyright}></td>
+    <td class="info_text_02"><{$lang_rb}></td>
+  </tr>
+</table>

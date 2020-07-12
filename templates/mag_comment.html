@@ -1,0 +1,12 @@
+<div style="text-align: center; padding: 3px;margin:3px;" class="tbl520"> <{$commentsnav}> <{$lang_notice}> </div>
+  <div class="tbl520">
+  <!-- start comments loop --> 
+  <{if $comment_mode == "flat"}>
+    <{include file="db:system_comments_flat.html"}>
+  <{elseif $comment_mode == "thread"}>
+    <{include file="db:system_comments_thread.html"}>
+  <{elseif $comment_mode == "nest"}>
+    <{include file="db:system_comments_nest.html"}>
+  <{/if}>
+  <!-- end comments loop --> 
+</div>

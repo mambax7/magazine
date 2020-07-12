@@ -1,0 +1,18 @@
+Developer history:
+
+2005-05-25
+
+1. fixed Kerry's part which disabled by him (online editor)
+2. solve double bytes conflict (big5)
+3. sorting function enable in module first page
+4. each article now is able to choose specific template
+5. whole module is able to toggle left/right block display ability
+6. modify css and compatibility with firefox, mac
+7. add upload identifier which image file then show itself, media file then playback...etc
+8. gathering articles by month
+9. page, title tag changed, and also style modified
+10. fixed poll information in backend where poster is not shown
+11. added fileds where page header and footer
+12. removed many useless index from langauge file
+13. suport some businese module like ok-shop link
+14. setting per line appear a specific number of category on WFS first page in backend. and also adjust each td tag

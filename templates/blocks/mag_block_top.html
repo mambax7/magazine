@@ -1,0 +1,19 @@
+<table width="99%" border="0" cellspacing="0" cellpadding="2"> 
+<{foreach item=mag from=$block.new}> 
+  <tr> 
+    <td width="100%"> 
+	<{$mag.title}> (<{$mag.new}>)
+	</td> 
+  </tr> 
+  <tr> 
+	<td>
+	 <{if $mag.image}> 
+      <div style="text-align: center;"><img src="<{$mag.image}>" align="left" hspace= "5" vspace= "0"  alt="" style="border: 1px solid black"></div> 
+	 <{/if}>
+	 <{if $mag.summary}>
+	  <div style="padding-left:10px"><{$mag.summary}></div>
+  	 <{/if}> 
+	</td>	
+  </tr>
+<{/foreach}> 
+</table>

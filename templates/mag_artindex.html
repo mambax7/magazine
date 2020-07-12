@@ -1,0 +1,123 @@
+<!-- 第一區 start -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td><img src="./images/artindex.gif"></td> <!-- 裝飾圖片 -->
+    <td width="100%" bgcolor="#DD6611" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" valign="top" class="spotlight">
+        <tr valign="bottom">
+          <td align="center" width="20%"><{$artarray.headertitle}></td> <!-- 頁首標題 -->
+          <td width="100%"><img src="./images/line_dot.gif" width="100%" height="1"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="summary"><{$artarray.header}></td> <!-- 頁首描述 -->
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- 第一區 end -->
+<br />
+<!-- 第二區 start --> 
+<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <!-- 左邊主分類選單 start -->  
+    <td width="200">
+      <table bgcolor="#DDDDDD" border="0" cellpadding="5" cellspacing="1" width="100%" align="center">
+        <{foreach item=category from=$categories}>
+        <tr align="center" bgcolor="#ffffff" valign="top">
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0">
+              <{if $category.imgalign == TRUE }><{if $category.sectionimage }>
+              <tr>
+                <td><{$category.sectionimage}></td>
+              </tr>
+              <{/if}><{/if}>
+              <tr>
+                <td height="7"></td>
+              </tr>
+              <tr>
+                <td height="14" bgcolor="#F4F4F4" style="padding-left:3px; vertical-align:middle;"><{$category.title}></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <{/foreach}>
+      </table>
+    </td>
+    <td width="5">&nbsp;</td>
+    <!-- 左邊主分類選單 end -->
+    <td width="100%">
+      <table align="center" border="0" width="100%" cellspacing="0" cellpadding="1">
+        <tr class="page_bar">
+         <td><{$artarray.showartamount}>&nbsp;&nbsp;<{if $artarray.pagenav != ""}><{$lang_pages}>: <{$artarray.pagenav}><{/if}>&nbsp;&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr class="title_bar">
+                <td width="50%" align="center"><{$lang_title}></td>
+                <td width="15%"><{$lang_files}></td>
+                <td width="10%"><{$lang_votes}></td>
+                <td width="10%"><{$lang_views}></td>
+                <td width="15%" align="center"><{$lang_date}></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>           
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">             
+              <{foreach item=article from=$articles}>
+              <tr class="text_line">
+                <td width="50%">&nbsp;<img src="images/list.gif">&nbsp;<{$article.title}>&nbsp;<{$article.icon}>&nbsp;<{if $article.commentcount> 0}>&nbsp;<font color="#ff6633">+<{$article.commentcount}></font>&nbsp;<{/if}><{$article.icons}></td>
+                <td width="15%">&nbsp;<{if $article.filescount > 0}><img src="./images/file.gif">x<{$article.filescount}><{/if}></td>
+                <td width="10%" id="<{if $article.rating >= 8}>rate2<{else}>rate<{/if}>"><{$article.rating}></td>
+                <td width="10%" id="<{if $article.counter >= 1000}>view2<{else}>view<{/if}>"><{$article.counter}></td>
+                <td width="15%" id="date" align="center"><{$article.published}></td>
+              </tr>
+              <{/foreach}>
+            </table>
+          </td>
+        </tr>
+        <tr>
+         <td align="right" valign="middle"><{$artarray.usermenu}></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- 第二區 end -->
+<br />
+<!-- 第三區 start --> 
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <!-- 快速導覽 start -->
+    <td width="30%" bgcolor="#EEEEEE" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="sortmenu">
+        <tr valign="bottom">
+          <td align="center" width="30%"><{$lang_menu}></td>
+          <td width="100%"><img src="./images/line_dot_red.gif" width="100%" height="1"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="summary" style="padding-left: 10px;"><{$artarray.qkmenu}></td> <!-- 排序選單 -->
+        </tr>
+      </table>
+    </td>
+    <!-- 快速導覽 end -->
+    <!-- 類別頁尾 start -->
+    <td width="70%" bgcolor="#77AA22" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" valign="top" class="spotlight">
+        <tr valign="bottom">
+          <td align="center" width="15%"><{$artarray.footertitle}></td> <!-- 頁尾標題 -->
+          <td width="100%"><img src="./images/line_dot.gif" width="100%" height="1"></td>
+        </tr>
+        <tr>
+          <td class="summary"><{$lang_rb}></td> <!-- RB mark -->
+          <td class="summary"><{$artarray.footer}></td> <!-- 頁尾描述 -->
+        </tr>
+      </table>
+    </td>
+    <!-- 類別頁尾 end -->
+  </tr>
+</table>
+<!-- 第三區 end -->
